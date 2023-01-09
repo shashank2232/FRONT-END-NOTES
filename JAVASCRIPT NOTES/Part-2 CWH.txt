@@ -1,0 +1,153 @@
+(1) Generating RANDOM NUMBERS:
+Math.random();   It generates a 16 decimal number between 0 to 0.9999999999999.(NEVER REACHES 1)
+If you want a random number between 1 to 10, simply multiply random number with 10 and to remove decimals, use FLOOR().
+
+Eg: var n = Math.random();
+    n = n*10;
+    n = Math.floor(n);
+    console.log(n);
+
+FOR A DICE:
+var n = Math.random();
+n = n*6;                 // as a dice has 1 to 6
+n = Math.floor(n) + 1;     // to remove decimals and give numbers from 1 to 6
+console.log(n);
+
+(2) IF-ELSE
+The if Statement
+Use the if statement to specify a block of JavaScript code to be executed if a condition is true.
+if (condition) {
+  //  block of code to be executed if the condition is true
+}
+
+The else Statement
+Use the else statement to specify a block of code to be executed if the condition is false.
+if (condition) {
+} else {
+}
+
+-> DIFFERENCE B/W == & ===
+=== also checks the data type matching whereas == only checks the data and doesn't care about data type.
+
+(3) ARRAYS
+var array = [1,2,3,4,5];
+var arr1 = array[0];
+var arr2 = array[1];
+var length = array.length;
+
+PRINTING WHOLE ARRAY -> 
+var array = [1,2,3,4,5];
+console.log(array);               // [1,2,3,4,5]
+
+TO FIND SOME ELEMENT IN ARRAY -> 
+array.includes();
+OR
+console.log(array.includes(2));
+
+TO PUSH ELEMENTS IN ARRAY ->
+array.push();        // this will push element into the end of array
+
+TO POP -> 
+array.pop;         // this will pop last element of array
+
+
+(4) LOOPS
+ The While Loop
+The while loop loops through a block of code as long as a specified condition is true.
+Syntax
+while (condition) {
+  // code block to be executed
+}
+OR
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+
+-> PROGRAM TO PRINT "FIZZ" FOR NUMBERS DIVISIBLE BY 3, "BUZZ" FOR 5 AND "FIZZBUZZ" FOR BOTH 3 & 5 using ARRAYS
+
+var count = 1;
+var output = [];
+while(count <= 30)
+{
+    if(count % 3 === 0 && count % 5 === 0)
+    {
+        output.push("FizzBuzz!");
+    }
+    else if(count % 3 === 0) 
+    {
+        output.push("Fizz");
+    }
+    else if(count % 5 === 0)
+    {
+        output.push("Buzz");
+    }
+    else{
+        output.push(count);
+    }
+    count++;
+}
+console.log(output);
+
+FOR LOOP :
+for (let i = 0; i < 5; i++) {
+  text += "The number is " + i;
+}
+We use let instead of int(in c++) for loops. let also signifies variables.
+OR
+for (var i = 0; i < 5; i++) {
+  text += "The number is " + i;
+}
+We use var instead of int(in c++) for loops. var also signifies variables.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,157 @@
+DOM MANIPULATION IN JAVASCRIPT
+(DOCUMENT OBJECT MODEL)
+Means document which is visible.
+
+Changing content of webpage DYNAMICALLY using JAVASCRIPT
+
+-> ARROW FUNCTIONS
+
+sum = (a,b)=>{
+return (a+b);
+}
+This is same as:
+function sum(a,b){
+return a+b;
+}
+
+-> JAVASCRIPT LOCAL STORAGE
+Helps to save data in user's computer as a string. (Go to Console and write localStorage + Enter), it will give the local storage.
+To find local storage of a website:
+GOTO -> APPLICATION -> LOCAL STORAGE
+
+-> JSON (JAVASCRIPT OBJECT NOTATION)
+Used for DATA EXCHANGE
+
+-> ECMA SCRIPT
+Scripting standard for maintaining JAVASCRIPT
+
+
+-> PROJECT 1 (BUILDING A CLOCK)
+To get time :   a.getHours() + ':' + a.getMinutes() + ':' + a.getSeconds()
+To get DATE IN FORM OF A LOCAL STRING:      a.toLocaleDateString()         '9/11/2022'
+
+-> Link to CSS file must be above inside head just below the title, but link to Javascript file has to be inside body(right at the end just before closing </body> tag) because
+   code runs line via line.
+
+INLINE JAVASCRIPT (Between head & body)
+<body onload="alert('HELLO');">
+
+INTERNAL JAVASCRIPT (Inside body)
+<script type="text/javascript">
+   alert("HELLO");
+</script>
+
+EXTERNAL JAVASCRIPT(Inside body)
+<script src="index.js"></script>
+
+-> DOM(DOCUMENT OBJECT MODEL)       -> USING JAVASCRIPT TO PLAY OR MANIPULATE WITH HTML CODE
+It basically makes a list of individual objects in our webpage that we can select & manipulate.
+TO SEE ANY WEBSITES WHOLE HTML CODE (INSPECT -> CONSOLE -> document+Enter and then simply EXPAND TO SEE WHOLE HTML)
+When a web page is loaded, the browser creates a Document Object Model of the page.  The HTML DOM model is constructed as a tree of Objects.
+
+With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+DOM CODING:
+document.firstElementChild.firstElementChild   (to get first element child (HEAD) )
+document.firstElementChild.lastElementChild  (BODY)
+
+To get h1 : its the first element child of body(last element child)
+document.firstElementChild.lastElementChild.firstElementChild
+
+NOW ONCE WE CAN SELECT OUR HTML CODES, WE CAN SIMPLY MANIPULATE IT ALSO.
+var heading = document.firstElementChild.lastElementChild.firstElementChild   (storing our heading in a variable to manipulate it later)
+heading.innerHTML = "GoodBye";             (when we hit ENTER, heading of website will change to "GoodBye")
+heading.style.color = "red";               (will change heading to red color)
+
+SELECTING OBJECTS USING QUERY SELECTOR:
+document.querySelector("input");
+
+Since its a checkbox,if we want to click on it as tick:
+document.querySelector("input").click();          (will mark checkbox TICK )
+
+DIFF. B/W PROPERTIES & METHODS:
+Properties describe about the object and methods tell what the object can do.
+
+to get the property ( use DOT . )
+
+TO GET ELEMENTS BY NAME:  document.getElementsByTagName("li")  
+
+TO SELECT ITEMS IN ARRAY OR LIST THAT WE WANNA CHANGE:  document.getElementsByTagName("li")[2].style.color = "orange";
+
+TO GET LENGTH -> document.getElementsByTagName("li").length
+
+TO SELECT ELEMENTS BY CLASS NAME ->   document.getElementsByClassName("btn");
+
+TO GET ID (single id instead of array) -> document.getElementById("title")
+to change it ->  document.getElementById("title").innerHTML = "GOODBYE"
+
+-> QUERY SELECTOR
+This also only returns a single item as the string we'll put in () is a SELECTOR.
+NOTE -> INSIDE A QUERY SELECTOR, WE CAN PUT ANYTHING , ELEMENT OR CLASS OR ID.
+
+QUERY SELECTOR WITH ELEMENT -> document.querySelector("h1")
+QUERY SELECTOR WITH ID -> document.querySelector("#title")               # for ID
+QUERY SELECTOR WITH CLASS -> document.querySelector(".btn")              . for CLASS
+
+document.querySelector("li a");       // THIS MEANS SELECT THE ANCHOR TAG INSIDE THE LIST ELEMENT.
+
+COMBINING SELECTORS:
+TO GET A CLASS OF ITEM THAT'S ALSO A LI(list) element:
+document.querySelector("li.item")
+
+document.querySelector("#list a")     // THIS WILL SELECT ANCHOR TAG INSIDE ID "LIST"
+
+TO SELECT AN ID MAPPED WITH A CLASS:
+document.querySelector("#list .item")      // ID "LIST" with a CLASS OF "ITEM"
+
+TO MAKE COLOR OF LINK INSIDE A LIST "RED"
+document.querySelector("li a").style.color = "red"
+
+
+-> PLAYING WITH CSS USING JAVASCRIPT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

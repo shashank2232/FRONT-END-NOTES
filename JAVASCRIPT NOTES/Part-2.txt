@@ -1,0 +1,119 @@
+(1) Random Number Generation:
+var x = Math.random();     // O.P.  0.17751134413190983
+It will always be lesser than 1 and could be 0 or more.
+
+--> TO GET RANDOM NUMBERS BETWEEN 1 AND 10:
+var x = Math.random();
+x = x * 10;
+x = Math.floor(x) + 1;              // +1 is done to include 10 also
+console.log(x)
+
+(2) IF-ELSE
+if(condition){
+
+}
+else{
+
+}
+--> Diff b/w == and === :
+In == it matches the value only, but in === it matches the value AS WELL AS THE DATA TYPE.
+
+NOTE: IN JAVASCRIPT, WE USE === ONLY, NOT == . FOR NOT EQUAL TO,WE USE !== , AND NOT != LIKE WE USE IN C++.
+Eg: FOR ===
+var a = 1;
+var b = "1";
+if(a === b){
+console.log("YES");
+}
+else{
+console.log("NO");
+}
+// O.P. NO   (matching the data types too)
+
+FOR ==
+var a = 1;
+var b = "1";
+if(a == b){
+console.log("YES");
+}
+else{
+console.log("NO");
+}
+// O.P. YES
+
+--> ELSE-IF
+if(condition){
+}
+else if(condition){
+}
+else{
+}
+
+(3) COMPARATORS
+&& (AND) , || (OR) , ! (NOT)
+
+(4) ARRAYS IN JAVASCRIPT
+var eggs = [1,2,3,4,5];
+var myEgg = eggs[1];     // 2
+var myEgg = eggs[0];     // 1
+
+FOR LENGTH OF ARRAY:
+console.log(eggs.length);    //5
+
+var guests = ["SHASHANK","VIJAY","ADITYA"];       // array of strings
+
+TO CHECK IF AN ELEMENT IS PRESENT IN ARRAY OR NOT:
+var eggs = [1,2,3,4,5]
+console.log(eggs.includes(3))         //true
+
+console.log(eggs.includes(30))        //false
+
+NOTE: IN JAVASCRIPT, AN ARRAY CAN CONTAIN ELEMENTS OF MULTIPLE DATA TYPES, UNLIKE C++ WHERE AN ARRAY ONLY HAD ONE DATA TYPE ELEMENTS(EITHER INT OR FLOAT OR STRING).
+
+--> FIZZ for multiple of 3 , BUZZ for multiple of 5 , FIZZ BUZZ for multiple of both 3 & 5
+for(var i=1;i<=100;i++)
+{
+    if((i % 3 === 0) && (i % 5 === 0)){
+        console.log(" FIZZ BUZZ ")
+    }
+    else if(i % 3 === 0)
+    {
+        console.log(" FIZZ ");
+    }
+    else if(i % 5 === 0)
+    {
+        console.log(" BUZZ ");
+    }
+    else{
+        console.log( i );
+    }
+}
+
+--> TO ADD & DELETE ITEMS FROM ARRAY
+var output = [];
+output.push(1);     // output is an array with element 1
+
+NOTE: PUSH ALWAYS PUSHER ITEM/ELEMENT TO THE END OF THE ARRAY
+
+output.pop();    // this will pop the last item from the array output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

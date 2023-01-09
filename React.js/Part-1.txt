@@ -1,0 +1,88 @@
+React.js
+A javascript library for building user interfaces. (JavaScript library created by Facebook)
+React, sometimes referred to as a frontend JavaScript framework, is a JavaScript library created by Facebook.
+React combines small amounts of HTML,CSS,JS files into a single component,so that each component have separate styling.
+
+--> CODE SANDBOX(browser based development environment for React) (https://codesandbox.io/s/introduction-to-jsx-forked-ec1usp?file=/public/index.html)
+My sandbox link(https://codesandbox.io/s/youthful-scooby-bmjmb8?file=/public/index.html)
+
+--> JSX (JAVASCRIPT-EXPRESSIONS)  lets us add html file inside js file and then inerst javascript inside that html
+THIS BELOW IS IN OUR JS FILE:
+// this is done to include the packages react & react-dom
+var React = require("react");
+var ReactDOM = require("react-dom");
+
+// render function takes 2 inputs: what to show & where to show it
+ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));    // by this our site will show an h1 with text "Hello World!",without touching html file
+
+BABEL is a javascript Compiler. On 1 side it allows us to write next-gen javascript & on other side it converts and shows the simple javascript code that each and every browser can read.
+(https://babeljs.io/repl#?browsers=defaults%2C%20not%20ie%2011%2C%20not%20ie_mob%2011&build=&builtIns=false&corejs=3.21&spec=false&loose=false&code_lz=EoUwhgxgLgIg8gWQHQCcQDsAmIUAoA8AFgIwB8AEiADZUD2ABAOq0pWYCE-A9CaQDT1MtCAFcAthihIA5iCgBRKiAnooAIQCeASUy4ARClq0oegJSmA3EA&debug=false&forceAllTransforms=false&shippedProposals=false&circleciRepo=&evaluate=false&fileSize=false&timeTravel=false&sourceType=module&lineWrap=true&presets=env%2Creact%2Cstage-2&prettier=false&targets=&version=7.20.11&externalPlugins=&assumptions=%7B%7D)
+
+ReactDOM.render(<h1>Hello World!</h1>, document.getElementById("root"));    // this is same as code below 
+
+var h1 = document.createElement("h1");
+h1.innerHTML = "Hello World!";
+document.getElementById("root").appendChild(h1);
+
+--> var React = require("react");  // can also be import
+ var ReactDOM = require("react-dom");
+ OR
+import React from "react";
+import ReactDOM from "react-dom"
+
+Instead of making a variable and initializing it with our packages,we can simply import then and save to React and ReactDOM variables.
+
+NOTE: Render() method can only take a single html element
+ReactDOM.render(<h1>Hello World!</h1><p>My name is Shashank.</p>, document.getElementById("root"));          // this will create an error  
+SOLUTION : ReactDOM.render(
+          <div> 
+            <h1>Hello World!</h1>
+            <p>My name is Shashank.</p>
+          </div>, 
+  document.getElementById("root"));
+Making a div element and puttinh h1 and p in it.
+ 
+LINK (https://codesandbox.io/s/introduction-to-jsx-forked-q80985)
+
+ReactDOM.render(
+  <div>
+    <h1>Hello {name}</h1>
+    <p>Your lucky number is {number}!</p>
+    {/* or <p>Your lucky number is {3+5}!</p>   will give "Your lucky number is 8!"*/}
+    {/* below line will show a random number with every time we refresh our site */}
+    <p>The random number is {Math.floor(Math.random() * 10)}</p>
+  </div>,
+  document.getElementById("root")
+);
+-->NOTE: We can only write expressions not statements like if else inside {} in html content.
+EXPRESSION -> it ends up with a value as result.
+STATEMENTS -> it aska computer to evaluate statements and work out something. 
+
+CODESANDBOX
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

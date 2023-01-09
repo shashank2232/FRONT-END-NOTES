@@ -1,0 +1,32 @@
+WEB-DESIGN
+
+1) COLOUR THEORY :
+RED -> Love,energy,intensity (for more passion and intensity)
+YELLOW -> Joy,attention (to grab attention)
+GREEN -> Freshness,safety,growth (specially used for groceries)
+BLUE -> Stability,trust (for grabbing user's trust)
+PURPLE -> Royalty,wealth,feminism 
+
+Some good colour combos:
+dark green used with light green , dark yellow with light yellow, dark blue with light blue & normal blue,red with orange
+-> A thing of red colour when placed with a thing of green colour,becomes more attractive (except the texts).
+
+WEBSITE FOR GOOD COLOUR PALETTES : colorhunt.co
+
+2) TYPOGRAPHY:
+Fonts really matter and an easy way to make designs look very fantastic.
+TYPES OF FAMOUS FONTS : i) SERIF Fonts  ii) SANS-SERIF Fonts
+In a design use no more than 2 fonts to make it look good.
+
+3) USER-INTERFACE(UI) DESIGN makes our web page look good and attractive.
+Eg. On a e-commerce website,the ADD TO BAG is of green color and the OUTLET is of red color due to attract customer's attention there.
+LAYOUTS are also important with different size texts, different pictures all to make page look good. A bad design layout example can be WIKIPEDIA.
+
+ALIGNMENT -> Proper positioning of elements is also important in a webpage. Proper alignment makes look the webpage more professional.
+ White spaces between elements make them look good.
+
+4) USER-EXPERIENCE(UX) DESIGN 
+Try to keep things simple for good user experience.
+
+5) Website (collectUI.com) where all designs are collected for further use.
+   Website (canva.com) is an online graphic editing program which is FREE.

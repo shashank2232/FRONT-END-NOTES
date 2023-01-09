@@ -1,0 +1,142 @@
+3 hours
+
+THE DRUM KIT:
+--> FUNCTIONS TAKING OTHER FUNCTIONS AS INPUT & RETURNING THE ANSWER
+function add(num1,num2){
+return num1 + num2;
+}
+function multiply(num1,num2){
+return num1 * num2;
+}
+function calculator(num1,num2,operator){
+return operator(num1,num2);
+}
+The function calculator has 3 parameters, 1st 2 are numbers & 3rd is the function we want to call.
+
+calculator(2,3,add);           // gives 5
+calculator(2,3,multiply);      // gives 6
+
+NOTE: Functions that take other functions as inputs are called HIGHER ORDER FUNCTIONS.
+
+--> PLAYING SOUND USING JS
+var audio = new Audio("sounds/tom-1.mp3");
+audio.play(); 
+Here we are creating an audio element in our JS file to link the sound file, and when we click on the button,the sound plays.
+
+/* TO ATTACH IMAGE TO BACKGROUND USING CSS */
+.w {
+  background-image: url("images/tom1.png");
+}
+
+--> THIS keyword is used to get the property OR code of the element we click on.
+this.style.color = "white";        (by this,when we click on a element/button it's color will become white)
+
+--> OBJECTS IN JS
+var bellBoy1 = {
+name = "johnny",
+age : 19,
+hasWorkPermit = true,
+languages : ["English","French"]
+}
+Here bellBoy1 is an OBJECT & name,age etc. are its PROPERTIES.
+
+bellBoy1.name;    // . is used by object to access a property
+alert("Hello,my name is " + bellBoy1.name);
+
+--> CONSTRUCTORS IN JS (names have to be capital,i.e. the first letter)
+function BellBoy (name, age, hasWorkPermit, languages){
+this.name = name;
+this.age = age;
+this.hasWorkPermit = hasWorkPermit;
+this.languages = languages;
+}
+
+Initialising OBJECTS via this Constructor:
+var bellBoy1 = new BellBoy("Timmy",19,true,["English","French"]);
+(DOT . is used while using the PROPERTY or calling the METHOD which have() that properties don't have)
+--> SWITCH STATEMENTS IN JS
+The switch statement is used to perform different actions based on different conditions.
+switch(expression) {
+  case x:
+    // code block
+    break;
+  case y:
+    // code block
+    break;
+  default:
+    // code block
+}
+
+--> USING KEYBOARD EVENT LISTENERS TO CHECK FOR KEY PRESSES (https://developer.mozilla.org/en-US/docs/Web/API/Element/keypress_event)
+// by this,if we tap on keys of our keyboard,an alert will pop-up on screen with the message, "keypress" is used for this thing
+document.addEventListener("keypress",function(){
+    alert("KEY WAS PRESSED!");
+});
+
+// DETECTING KEYBOARD PRESS
+document.addEventListener("keypress",function(event){
+    makeSound(event.key);
+});
+
+function makeSound(key){
+    switch (key) {
+        case "w":
+            var tom1 = new Audio("sounds/tom-1.mp3");
+            tom1.play();
+            break;
+
+        case "a":
+            var tom2 = new Audio("sounds/tom-2.mp3");
+            tom2.play();
+            break;
+
+        case "s":
+            var tom3 = new Audio("sounds/tom-3.mp3");
+            tom3.play();
+            break;
+
+        case "d":
+            var tom4 = new Audio("sounds/tom-4.mp3");
+            tom4.play();
+            break;
+
+        case "j":
+            var snare = new Audio("sounds/snare.mp3");
+            snare.play();
+            break;
+
+        case "k":
+            var crash = new Audio("sounds/crash.mp3");
+            crash.play();
+            break;
+
+        case "l":
+            var kick = new Audio("sounds/kick-bass.mp3");
+            kick.play();
+            break;
+
+        default: console.log(buttonInnerHTML)
+    }
+}
+
+We'll simply call function makeSound(buttonInnerHTML) .
+
+--> TYPES OF FUNCTIONS:
+1) HIGHER ORDER FUNCTIONS (functions that take other functions as inputs)
+2) CALLBACK FUNCTIONS (functions that get passed in inputs of higher order functions)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

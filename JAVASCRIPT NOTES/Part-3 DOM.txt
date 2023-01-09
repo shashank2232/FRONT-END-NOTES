@@ -1,0 +1,137 @@
+DOCUMENT OBJECT MODEL:
+--> INLINE JAVASCRIPT
+<!-- onload means whenever our body will get loaded up,whatever javascript is written in our quotation marks will get CARRIED OUT -->
+<body onload="alert('Hello');"> 
+    <h1>Hello</h1>
+</body>
+</html>
+Inline js is not a good practice.
+
+--> INTERNAL JAVASCRIPT
+<body>
+    <h1>Hello</h1>
+    <script type="text/javascript">
+        alert("Hello");
+    </script>
+</body>
+Once the alert i.e. internal js executes, then the h1 will be shown in the webpage.
+
+--> EXTERNAL JAVASCRIPT
+    <script src="index.js" charset="utf-8"></script>
+In CSS,we put the link of css file inside the head below the title,but in JS we put that link inside the body using <script></script>.
+
+--> DOM (Dominating the DOM to add functionality to HTML elements)
+When user is using website and at that time if we want to make changes in our site to make it look attractive, we can't rely on just HTML & CSS, hence DOM is used.
+
+document.firstElementChild;                            // html
+document.firstElementChild.firstElementChild;          // head
+document.firstElementChild.lastElementChild;           // body
+document.firstElementChild.lastElementChild.firstElementChild;   // h1            
+
+var heading = document.firstElementChild.lastElementChild.firstElementChild;   // done to select the heading 
+heading.innerHTML = "GOODBYE";             // done to change heading via dom,save it in a variable and then manipulate it
+heading.style.color = "red";              // to change color of heading 
+
+--> TO SELECT & MANIPULATE OBJECTS HAVING SELECTORS    (document.querySelector())  (QUERY SELECTORS ARE USED TO SELECT SINGLE ELEMENT)
+document.querySelector("input").click();      // this selects the selector "input" and checks the checkbox with a tick
+We use javascript to manipulate our objects in html code. If we have an object "car" , we can use car.colour; to access its color value.
+This is a GETTER(GET PROPERTY).
+
+car.numberOfDoors = 0;       // this is a SETTER(SETS THE PROPERTY TO 0),SET PROPERTY.
+car.drive();          // this will make car perform a function i.e. drive (CALL METHOD PROPERTY) , here drive() is a METHOD associated with a object CAR
+
+NOTE : Difference b/w METHODS & PROPERTIES is that a property doesn't have parentheses, while a method has parentheses.
+Eg. For a BUTTON:
+PROPERTIES -> innerHTML , style , firstChild
+METHODS -> click() , appendChild() , setAttribute()
+Methods are actually a function that objects can do.
+
+--> document.getElementByTagName()
+    This looks through the webpage and searches for the element with the tag name given.
+
+document.getElementByTagName("li");      // we'll get an array of all the list items
+This will fetch all the ELEMENTS WITH TAG NAME "LI". Hence it is getElements i.e. plural.
+NOTE: HERE WE CAN'T SET PROPERTY OF THE LIST BECAUSE IT IS AN ARRAY.
+Hence, we'll select the item in the list that we want to change & then we can simply change it's property.
+
+Eg: We have a list of 3 items , APPLE BANANA ORANGE :
+document.getElementsByTagName("li")[2].style.color = "blue";        // this will change color of element at index 2 i.e. ORANGE to blue color (style.color is used to change color)
+
+--> TO GET TOTAL NUMBER OF ELEMENTS WITH TAG NAME("LI")
+document.getElementsByTagName("li").length;               // will give 3 above example
+
+--> document.getElementsByClassName();    
+ALLOWS US TO SELECT ELEMENTS BASED ON NAME OF "CLASS".  HERE ALSO WE'LL GET BACK AN ARRAY AS IT IS getElements i.e. plural.
+document.getElementsByClassName("btn");     // array of elements with class name "btn"
+document.getElementsByClassName("btn")[0].style.color = "red";    // [0] as it requires index of element we have to change, change color to red of the button
+
+--> document.getElementById(); 
+Since here we have getElement i.e. singular, we wont get back an array,we'll get back a single element, because we know in a web page EVERY SINGLE ID MUST BE UNIQUE.
+
+document.getElementById("title");        // to get the id named "title"
+document.getElementById("title").innerHTML = "GoodBye!";        
+
+--> document.querySelector();          //the string inside the parentheses is a SELECTOR
+SELECTORS are like in CSS, things before the curly braces are all called selectors. Eg. body,h1,p
+For selecting elements in CSS: just the name , body or p or h1
+For selecting class in CSS: just dot . -> .navbar
+For selecting id in CSS: just # -> #navbar
+WE CAN ALSO COMBINE THEM WITH SELECTORS : CLASS WITH ID(.container #title)   OR  ID WITH CLASS(#title .container)  OR CLASS WITH ELEMENT (.container p)
+
+Inside querySelector()  we can put element or class or id anything.
+
+--> document.querySelector("li a");       // this means selecting anchor tag inside the list
+    document.querySelector("a");          // this means selecting anchor tag
+
+EG: <ul id="list"> 
+        <li class="item"><a href="https://www.google.com">Google</a></li>
+        <li class="item">Second</li>
+        <li class="item">Third</li>
+    </ul>
+
+document.querySelector("#list .item");            // this will select the first list item
+TO SELECT ALL LIST ITEMS:
+document.querySelectorAll("#list .item");
+
+TO GET ELEMENT AT 2ND INDEX :
+document.querySelectorAll("#list .item")[2].style.color = "blue";
+
+-> TO CHANGE COLOR OF H1 (document.querySelector("h1").style.color = "red";)
+
+--> SITE TO SEE HTML DOM STYLING (https://www.w3schools.com/jsref/dom_obj_style.asp)
+
+--> document.querySelector("h1").style.visibility = "hidden";         // IN JS
+We simply did  visibility:hidden;  in CSS, but in js we have to write the changing value in a string type.
+
+--> TO CHANGE BCG-COLOR OF BUTTON
+document.querySelector("button").style.backgroundColor = "yellow";
+
+--> TO GET THE CONTENT
+document.querySelector("h1").textContent;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

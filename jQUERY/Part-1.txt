@@ -1,0 +1,175 @@
+jQUERY:
+This is a Javascript library.
+Library vs Framework : Framework eases our work and we don't have to do everything on our own. Library is like a class where we have written 
+a set of methods and we want to resue those methods, we can use it many times we want,we won't write its methods again and again.
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. 
+When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+
+The purpose of jQuery is to make it much easier to use JavaScript on your website. jQuery is a lightweight, "write less, do more", JavaScript library.
+Many of the biggest companies on the Web use jQuery, such as:
+Google , Microsoft , IBM , Netflix
+
+IN JS --> for(i=0; i<document.querySelectorAll("button").length;i++){
+          document.querySelectorAll("button")[i].addEventListener("click",function(){
+          document.querySelector("h1").style.color = "red";
+          }); }
+
+In jQuery --> $("button").click(function()){
+              $("h1").css("color","red"); })
+
+jQuery is a library i.e. a bunch of code that somebody else wrote that you can use to your own projects and use.
+
+IN JS -> document.querySelector("h1");      IN jQuery-> jQuery("h1")  OR $("h1")
+
+--> Link to include jQuery in code (<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>)
+ Put this link above the link for js external file.
+$("h1").css("color","red");         // to make color of h1 red
+
+--> SELECTING ELEMENTS WITH JQUERY 
+$("h1"); 
+Eg:   We want an h1 with class "title" -->  $("h1.title");
+We want an h1 in an id "header" -->   $("#header h1");
+
+To select all buttons in JS , we did :  document.querySelectorAll("button");
+In jquery: $("button");    // this will do the same i.e. selecting all the buttons
+
+console.log($("h1").css("color"));  // this will tell the color of our element h1
+
+--> ADDING CLASS OF CSS HERE
+$("h1").addClass("big-title");          // big-title is a class whose properties are defined in css
+
+--> REMOVING CLASS
+$("h1").removeClass("big-title");
+
+--> ADDING MULTIPLE CLASSES
+$("h1").addClass("big-title margin");       // adding 2 classes,big-title and margin
+
+--> FINDING A CLASS
+$("h1").hasClass("big-title");         // will find the class big-title
+
+--> MANIPULATING TEXT WITH jQuery
+$("h1").text("BYE");        // this will change text in h1 to BYE
+$("button").text("Don't Click Me");  // every button will have "Don't Click Me" written on it
+
+// in js ,we used innerHTML to update or add text , in jquery we use just html
+$("button").html("<em>HEY</em>")          // this will change our button text to emphasized "HEY"
+
+Most things in jQuery are implemented using METHODS and we access it via .(DOT)
+
+--> MANIPULATING ATTRIBUTES WITH jQUERY
+$("img").attr("src");
+Setting value of attribute: 
+$("a").attr("href","www.google.com");            // this will change attribute a link with google.com
+
+--> ADDING EVENT LISTENERS VIA JQUERY
+$("h1").click(function(){
+$("h1").css("color","purple");
+});
+
+// by this, whenever we click on any button, it will change the color of our h1 to purple
+$("button").click(function(){
+$("h1").css("color","purple");
+});
+
+// detecting event in input box
+$("input").keypress(function(event)){
+console.log(event.key);
+});
+
+--> EASY WAY OF ADDING EVENT LISTENERS (using on())
+It takes 2 parameters, 1st is the event you r looking to listen for, 2nd parameter is callback function().
+// when it will detect mouseover on our h1, its color will become purple
+$("h1").on("mouseover",function(){
+$("h1").css("color","purple");
+});
+
+// when it will detect click on our h1, its color will become purple
+$("h1").on("click",function(){
+$("h1").css("color","purple");
+});
+
+--> ADDING & REMOVING ELEMENTS FROM jQUERY
+$("h1").before("<button>New</button>");            // this will add a button with text "New" before our h1     <button>New</button><h1>Hello</h1>
+
+$("h1").after("<button>New</button>");            // this will add a button with text "New" after our h1       <h1>Hello</h1><button>New</button>
+
+$("h1").prepend("<button>New</button>");            // this will add button with text "New" into h1 just before h1    <h1><button>New</button>Hello</h1>
+
+$("h1").append("<button>New</button>");            // this will add a button with text "New" into h1 just after h1    <h1>Hello<button>New</button></h1>
+
+--> WEBSITE ANIMATIONS WITH jQuery
+// this will hide the selected element i.e. h1 on event click
+$("h1").on("click",function(){
+$("h1").hide();
+});
+
+// to make it re-appear
+$("h1").show();
+
+// now when first we click on button, h1 will hide , then when we again click on our button , h1 will re-appear
+$("h1").on("click",function(){
+$("h1").toggle();
+});
+
+// by this, when we'll click on our button, h1 will hide slowly like fading
+$("h1").on("click",function(){
+$("h1").fadeOut();
+});
+
+// by this, when we'll click again on our button, h1 will re-appear slowly
+$("h1").on("click",function(){
+$("h1").fadeIn();
+});
+
+// this will allow our buttons to fade out & fade in on each clicks
+$("h1").on("click",function(){
+$("h1").fadeToggle();
+});
+
+// this will collapse our element h1
+$("h1").on("click",function(){
+$("h1").slideUp();
+});
+
+// this will un-collapse our element h1
+$("h1").on("click",function(){
+$("h1").slideDown();
+});
+
+$("h1").on("click",function(){
+$("h1").slideToggle();
+});
+
+// allows us to define some custom css that u want to animate , here we'll animate our opacity by 0.5
+$("h1").on("click",function(){
+$("h1").animate({opacity : 0.5});
+});
+Opacity will b more transparent.
+
+// margin of 20px
+$("h1").on("click",function(){
+$("h1").animate({margin : 20});
+});
+
+// here we chained 3 methods together , it will b done in order , 1st slideup on click,on next click it'll slidedown , on next click opacity will be 0.5
+$("h1").on("click",function(){
+$("h1").slideUp().slideDown().animate({opacity:0.5});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
